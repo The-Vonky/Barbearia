@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbearia Los Barbudos</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="agendamento.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css">
+    <script src="agendamento.js"></script>
+</head>
+<body>
+    <!-- Cabeçalho da página -->
+    <header id="header">
+        <div class="container flex">
+            <a href="index.html">
+                <img src="imgs_agendamento/logosfundo.png" alt="LosBarbudosOficial" class="logo">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="galeria.html">Galeria</a></li>
+                    <li><a href="contact.html">Contato</a></li>
+                    <li><a href="aboutus.html">Sobre Nós</a></li>
+                </ul>
+            </nav>
+            <div class="btn-entrar">
+                <a href="login.html"><button>Entrar</button></a>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Seção de agendamento -->
+    <section class="banner">
+        <div class="agendamento">
+            <img src="imgs_agendamento/logosfundo.png" alt="logo">
+            <h1>Agende seu horário</h1>
+            <h2>Agende os serviços que desejar e agende-os no horário que preferir</h2>
+            <div class="dropdown">
+                <button class="btn dropdown-toggle" id="selecione_barbeiro" onclick="selecionar_barbeiro()" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Selecione um barbeiro
+                </button>
+                <ul class="dropdown-menu">
+                  <li><button class="dropdown-item" type="button"><img class="imgBarbeiros" src="imgs_agendamento/barbeiro1.jpg" alt="">barbeiro1</button></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><button class="dropdown-item" type="button"><img class="imgBarbeiros" src="imgs_agendamento/barbeiro2.jpg" alt="">barbeiro2</button></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><button class="dropdown-item" type="button"><img class="imgBarbeiros" src="imgs_agendamento/barbeiro3.jpg" alt="">barbeiro3</button></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><button class="dropdown-item" type="button"><img class="imgBarbeiros" src="imgs_agendamento/barbeiro4.jpg" alt="">barbeiro4</button></li>
+                </ul>
+            </div>
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" id="selecione_data" onclick="selecionar_data()" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Selecione a data desejada
+                </button>
+                <ul class="dropdown-menu">
+                  <li><input type="datetime-local"></li>
+                </ul>
+            </div>
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" id="selecione_corte" onclick="selecionar_corte()" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Selecione o serviço desejado
+                </button>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li class="dropdown-item">Corte <br> R$ 30,00 - 40 min</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li class="dropdown-item">Barba <br> R$ 15,00 - 20 min</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li class="dropdown-item">Corte Feminino <br> R$ 40,00 - 40 min</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li class="dropdown-item">Corte Infantil <br> R$ 25,00 - 40 min</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li class="dropdown-item">Corte com Hidratação <br> R$ 45,00 - 60 min</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li class="dropdown-item">Tintura Coloração <br> R$ 25,00 - 20 min</a></li>
+                </ul>
+            </div>
+            <button type="button" id="agendar" class="btn botaoAgendar">Agendar</button>
+        </div>
+    </section>
+
+    <!-- Seção de planos -->
+    <section class="plans">
+        <div class="container">
+            <h2>Planos de Assinatura</h2>
+            <div class="plan-cards">
+                <div class="plan-card">
+                    <h3>Plano Mensal</h3>
+                    <p>Benefícios exclusivos para você aproveitar todos os meses.</p>
+                    <ul>
+                        <li>Corte mensal gratuito</li>
+                        <li>Descontos em produtos</li>
+                        <li>Agendamentos prioritários</li>
+                        <h1>R$49,99</h1>
+                    </ul>
+                </div>
+                <div class="plan-card">
+                    <h3>Plano Anual</h3>
+                    <p>Descontos ainda maiores e mais benefícios durante o ano todo.</p>
+                    <ul>
+                        <li>Corte mensal gratuito</li>
+                        <li>Produtos gratuitos trimestrais</li>
+                        <li>Descontos especiais</li>
+                        <li>Agendamentos prioritários</li>
+                        <h1>R$499,99</h1>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Seção de comentários -->
+    <section class="comments">
+        <div class="container">
+            <h2>O que nossos clientes dizem</h2>
+            <div class="comment">
+                <p>"Serviço excelente, ambiente acolhedor e profissionais qualificados!" - João Silva</p>
+            </div>
+            <div class="comment">
+                <p>"Melhor barbearia da cidade! Recomendo a todos." - Marcos Pereira</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de localização -->
+    <section class="location">
+        <div class="container">
+            <h2>Localização</h2>
+            <div class="map-container">
+                <iframe src="Imagens/Captura de tela 2024-06-21 163237.png" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé da página -->
+    <footer>
+        <div class="container">
+            <p>© 2024 Barbearia Los Barbudos. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Importa o script do carrossel e do cabeçalho -->
+    <script src="index.js"></script>
+        <!-- Importa o script do menu -->
+        <script src="menu.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
